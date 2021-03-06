@@ -1,0 +1,16 @@
+---
+  - name: install oh my fish
+    shell: curl -L https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+    args:
+      creates: /home/davido/.local/share/omf
+      executable: /usr/bin/fish
+ 
+  - name: copy fish config
+    copy:
+      src: fish/
+      dest: ~/.config/fish/
+
+  - name: copy omf config
+    copy:
+      src: omf/
+      dest: ~/.config/omf/

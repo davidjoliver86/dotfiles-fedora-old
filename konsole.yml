@@ -1,0 +1,6 @@
+---
+- name: install konsole settings
+  copy:
+    src: konsole/
+    dest: /home/davido/.local/share/konsole/
+    mode: "0644"

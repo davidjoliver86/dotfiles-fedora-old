@@ -1,0 +1,6 @@
+---
+- name: install vscode settings
+  copy:
+    src: vscode/
+    dest: /home/davido/.config/Code/User/
+    mode: "0644"

@@ -1,0 +1,22 @@
+---
+
+- name: base (root)
+  hosts: 127.0.0.1
+  connection: local
+  become: yes
+  tasks:
+    - include_tasks: yum_pkgs_base.yml
+    - include_tasks: awscli.yml
+    - include_tasks: docker.yml
+
+- name: base (davido)
+  hosts: 127.0.0.1
+  connection: local
+  become: yes
+  become_user: davido
+  tasks:
+    - include_tasks: flatpak_pkgs_base.yml
+    - include_tasks: fish.yml
+    - include_tasks: konsole.yml
+    - include_tasks: vscode.yml
+    - include_tasks: ssh.yml

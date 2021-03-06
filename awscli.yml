@@ -1,0 +1,5 @@
+---
+- name: install awscli
+  command:
+    cmd: ./install_awscli.sh
+    creates: /usr/local/bin/aws

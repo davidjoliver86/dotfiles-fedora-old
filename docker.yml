@@ -1,0 +1,16 @@
+---
+- name: ensure docker group exists
+  group:
+    name: docker
+
+- name: add my user to docker group
+  user:
+    name: davido
+    groups: docker
+    append: yes
+
+- name: start docker service
+  ansible.builtin.service:
+    name: docker
+    enabled: yes
+    state: started

@@ -1,0 +1,47 @@
+---
+  - name: chrome repo
+    yum_repository:
+      name: google-chrome
+      description: Google Chrome
+      baseurl: http://dl.google.com/linux/chrome/rpm/stable/x86_64
+      enabled: yes
+      gpgcheck: yes
+      gpgkey: https://dl.google.com/linux/linux_signing_key.pub
+
+  - name: vscode repo
+    yum_repository:
+      name: code
+      description: Visual Studio Code
+      baseurl: https://packages.microsoft.com/yumrepos/vscode
+      enabled: yes
+      gpgcheck: yes
+      gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+
+  - name: docker repo
+    yum_repository:
+      name: docker
+      baseurl: https://download.docker.com/linux/fedora/$releasever/$basearch/stable
+      description: Docker CE Stable
+      enabled: yes
+      gpgcheck: yes
+      gpgkey: https://download.docker.com/linux/fedora/gpg
+
+  - name: install packages
+    dnf:
+      name: "{{ packages }}"
+    vars:
+      packages:
+        - vim
+        - git
+        - papirus-icon-theme
+        - htop
+        - jq
+        - curl
+        - fish
+        - cascadia-fonts-all
+        - liberation-fonts
+        - google-chrome-stable
+        - code
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io
