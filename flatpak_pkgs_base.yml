@@ -11,3 +11,9 @@
       name: com.slack.Slack
       state: present
       method: user
+
+  - name: install zoom flatpak
+    community.general.flatpak:
+      name: us.zoom.Zoom
+      state: present
+      method: user
