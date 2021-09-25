@@ -41,3 +41,6 @@ set -g theme_date_timezone America/Los_Angeles
 # fish greeting
 function fish_greeting
 end
+
+# no blinking cursor
+set fish_cursor_unknown block
