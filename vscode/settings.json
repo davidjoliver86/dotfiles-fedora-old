@@ -1,6 +1,5 @@
 {
-    "editor.fontFamily": "Cascadia Mono",
-    "editor.fontWeight": "300",
+    "editor.fontFamily": "Cascadia Code",
     "editor.fontLigatures": true,
     "editor.fontSize": 13,
     "editor.formatOnSave": true,
@@ -26,17 +25,14 @@
         "**/.tox/**": true,
         "**/.tox": true
     },
-    "oneDarkPro.italic": false,
-    "oneDarkPro.vivid": true,
-    "terminal.integrated.shell.linux": "/usr/bin/fish",
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
+    "security.workspace.trust.enabled": false,
+    "telemetry.telemetryLevel": "off",
+    "terminal.integrated.defaultProfile.linux": "fish",
     "typescript.surveys.enabled": false,
     "window.menuBarVisibility": "toggle",
     "window.titleBarStyle": "native",
     "workbench.commandPalette.history": 0,
     "workbench.iconTheme": "material-icon-theme",
     "workbench.settings.useSplitJSON": true,
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "One Dark Pro"
+    "workbench.startupEditor": "newUntitledFile"
 }

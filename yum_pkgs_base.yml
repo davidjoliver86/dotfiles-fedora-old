@@ -1,12 +1,4 @@
 ---
-  - name: chrome repo
-    yum_repository:
-      name: google-chrome
-      description: Google Chrome
-      baseurl: http://dl.google.com/linux/chrome/rpm/stable/x86_64
-      enabled: yes
-      gpgcheck: yes
-      gpgkey: https://dl.google.com/linux/linux_signing_key.pub
 
   - name: vscode repo
     yum_repository:
@@ -33,7 +25,6 @@
       packages:
         - vim
         - git
-        - papirus-icon-theme
         - htop
         - jq
         - curl
