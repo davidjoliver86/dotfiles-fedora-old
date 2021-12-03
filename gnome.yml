@@ -1,0 +1,6 @@
+---
+- name: dconf settings
+  community.general.dconf:
+    key: /org/gnome/desktop/interface/gtk-theme
+    value: "'Adwaita-dark'"
+    state: present

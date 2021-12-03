@@ -19,3 +19,4 @@
     - include_tasks: fish.yml
     - include_tasks: vscode.yml
     - include_tasks: ssh.yml
+    - include_tasks: gnome.yml

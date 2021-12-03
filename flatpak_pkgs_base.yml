@@ -17,3 +17,9 @@
       name: us.zoom.Zoom
       state: present
       method: user
+
+  - name: install bitwarden flatpak
+    community.general.flatpak:
+      name: com.bitwarden.desktop
+      state: present
+      method: user
