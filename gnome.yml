@@ -1,6 +1,15 @@
 ---
 - name: dconf settings
   community.general.dconf:
-    key: /org/gnome/desktop/interface/gtk-theme
-    value: "'Adwaita-dark'"
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
     state: present
+  loop:
+    - { key: "/org/gnome/desktop/interface/gtk-theme", value: "'Adwaita-dark'" }
+    - { key: "/org/gnome/desktop/interface/monospace-font-name", value: "'Cascadia Mono PL 10'" }
+    - { key: "/org/gnome/desktop/interface/enable-animations", value: "false" }
+
+- name: copy gtk settings
+  ansible.builtin.copy:
+    src: gtk-3.0/
+    dest: ~/.config/gtk-3.0
