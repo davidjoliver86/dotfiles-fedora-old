@@ -5,9 +5,9 @@
     value: "{{ item.value }}"
     state: present
   loop:
-    - { key: "/org/gnome/desktop/interface/gtk-theme", value: "'Adwaita-dark'" }
+    - { key: "/org/gnome/terminal/legacy/menu-accelerator-enabled", value: "false" }
+    - { key: "/org/gnome/desktop/interface/clock-format", value: "'12h'" }
     - { key: "/org/gnome/desktop/interface/monospace-font-name", value: "'Cascadia Mono PL 10'" }
-    - { key: "/org/gnome/desktop/interface/enable-animations", value: "false" }
 
 - name: copy gtk settings
   ansible.builtin.copy:

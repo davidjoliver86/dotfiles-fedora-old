@@ -1,5 +1,4 @@
 ---
-
   - name: vscode repo
     yum_repository:
       name: code
@@ -31,7 +30,7 @@
         - fish
         - cascadia-fonts-all
         - liberation-fonts
-        - google-chrome-stable
+        - google-chrome-stable  # repo included by default
         - code
         - docker-ce
         - docker-ce-cli
