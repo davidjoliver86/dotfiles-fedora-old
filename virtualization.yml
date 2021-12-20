@@ -1,0 +1,20 @@
+---
+  - name: install virtualization
+    dnf:
+      name: "@virtualization"
+
+  - name: install vagrant
+    dnf:
+      name: "@vagrant"
+
+  - name: enable libvirt
+    ansible.builtin.systemd:
+      name: libvirtd.service
+      state: started
+      enabled: true
+
+  - name: enable network readonly socket
+    ansible.builtin.systemd:
+      name: virtnetworkd-ro.socket
+      state: started
+      enabled: true
