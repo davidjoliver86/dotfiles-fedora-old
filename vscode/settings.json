@@ -28,6 +28,8 @@
     "security.workspace.trust.enabled": false,
     "telemetry.telemetryLevel": "off",
     "terminal.integrated.defaultProfile.linux": "fish",
+    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.fontFamily": "Cascadia Mono PL",
     "typescript.surveys.enabled": false,
     "window.menuBarVisibility": "toggle",
     "window.titleBarStyle": "native",
