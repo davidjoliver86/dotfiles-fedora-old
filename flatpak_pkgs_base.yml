@@ -23,3 +23,9 @@
       name: com.bitwarden.desktop
       state: present
       method: user
+
+  - name: install joplin flatpak
+    community.general.flatpak:
+      name: net.cozic.joplin_desktop
+      state: present
+      method: user

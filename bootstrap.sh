@@ -1,5 +1,5 @@
 #!/bin/bash
-dnf install -y git python3-psutil
+dnf install -y git
 /usr/bin/python3 -m venv /usr/lib/virtualenvs/ansible --system-site-packages
 
 /usr/lib/virtualenvs/ansible/bin/pip install ansible

@@ -1,4 +1,13 @@
 ---
+  - name: chrome repo
+    yum_repository:
+      name: google-chrome
+      description: Google Chrome
+      baseurl: http://dl.google.com/linux/chrome/rpm/stable/x86_64
+      enabled: yes
+      gpgcheck: yes
+      gpgkey: https://dl.google.com/linux/linux_signing_key.pub
+
   - name: vscode repo
     yum_repository:
       name: code
@@ -30,8 +39,9 @@
         - fish
         - cascadia-fonts-all
         - liberation-fonts
-        - google-chrome-stable  # repo included by default
+        - google-chrome-stable
         - code
         - docker-ce
         - docker-ce-cli
         - containerd.io
+        - keepassxc
