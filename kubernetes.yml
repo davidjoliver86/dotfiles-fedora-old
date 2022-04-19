@@ -1,0 +1,16 @@
+---
+  - name: kubectl repo
+    yum_repository:
+      name: kubectl
+      baseurl: https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+      description: Kubernetes
+      enabled: yes
+      gpgcheck: yes
+      repo_gpgcheck: yes
+      gpgkey:
+        - https://packages.cloud.google.com/yum/doc/yum-key.gpg
+        - https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+
+  - name: install kubectl
+    dnf:
+      name: kubectl
