@@ -6,7 +6,6 @@
   become: yes
   tasks:
     - include_tasks: yum_pkgs_base.yml
-    - include_tasks: azure.yml
     - include_tasks: awscli.yml
     - include_tasks: docker.yml
     - include_tasks: virtualization.yml
