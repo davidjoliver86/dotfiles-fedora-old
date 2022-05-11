@@ -11,4 +11,6 @@
     state: directory
 
 - name: create symlinks
-  shell: ln -s ~/.tfenv/bin/* ~/.bin/
+  shell:
+    cmd: ln -s ~/.tfenv/bin/* ~/.bin/
+    creates: ~/.bin/tfenv
