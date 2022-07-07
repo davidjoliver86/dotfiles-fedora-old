@@ -26,6 +26,15 @@
       gpgcheck: yes
       gpgkey: https://download.docker.com/linux/fedora/gpg
 
+  - name: hashicorp repo
+    yum_repository:
+      name: hashicorp
+      description: Hashicorp Stable - $basearch
+      enabled: yes
+      gpgcheck: yes
+      baseurl: https://rpm.releases.hashicorp.com/fedora/$releasever/$basearch/stable
+      gpgkey: https://rpm.releases.hashicorp.com/gpg
+
   - name: install packages
     dnf:
       name: "{{ packages }}"

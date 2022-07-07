@@ -2,7 +2,8 @@
 dnf install -y git
 /usr/bin/python3 -m venv /usr/lib/virtualenvs/ansible --system-site-packages
 
-/usr/lib/virtualenvs/ansible/bin/pip install ansible
+/usr/lib/virtualenvs/ansible/bin/pip install --upgrade pip
+/usr/lib/virtualenvs/ansible/bin/pip install 'ansible<6'
 
 mkdir -p /etc/ansible
 cat <<EOF > /etc/ansible/hosts
