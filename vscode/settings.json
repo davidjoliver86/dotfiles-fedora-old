@@ -1,7 +1,7 @@
 {
     "editor.fontFamily": "Cascadia Code",
     "editor.fontLigatures": true,
-    "editor.fontSize": 13,
+    "editor.fontSize": 13.5,
     "editor.formatOnSave": true,
     "editor.lineHeight": 16,
     "editor.minimap.enabled": false,
@@ -36,5 +36,7 @@
     "workbench.commandPalette.history": 0,
     "workbench.iconTheme": "material-icon-theme",
     "workbench.settings.useSplitJSON": true,
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "python.formatting.provider": "black",
+    "terraform.languageServer.terraform.path": "/home/davido/.bin/terraform"
 }
