@@ -35,6 +35,26 @@
       baseurl: https://rpm.releases.hashicorp.com/fedora/$releasever/$basearch/stable
       gpgkey: https://rpm.releases.hashicorp.com/gpg
 
+  - name: install rpmfusion free gpg key
+    rpm_key:
+      key: https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020
+      fingerprint: E9A4 91A3 DE24 7814 E7E0 67EA E06F 8ECD D651 FF2E
+
+  - name: install rpmfusion nonfree gpg key
+    rpm_key:
+      key: https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020
+      fingerprint: 79BD B88F 9BBF 7391 0FD4 095B 6A2A F961 9484 3C65
+
+  - name: install rpmfusion free
+    dnf:
+      name: "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_facts['distribution_major_version'] }}.noarch.rpm"
+      state: present
+
+  - name: install rpmfusion nonfree
+    dnf:
+      name: "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_facts['distribution_major_version'] }}.noarch.rpm"
+      state: present
+
   - name: install packages
     dnf:
       name: "{{ packages }}"
@@ -55,3 +75,4 @@
         - containerd.io
         - keepassxc
         - stoken-cli
+        - ffmpeg
