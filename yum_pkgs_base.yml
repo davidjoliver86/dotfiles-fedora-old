@@ -74,5 +74,4 @@
         - docker-ce-cli
         - containerd.io
         - keepassxc
-        - stoken-cli
         - ffmpeg

@@ -23,3 +23,9 @@
       name: net.cozic.joplin_desktop
       state: present
       method: user
+
+  - name: install teams flatpak
+    community.general.flatpak:
+      name: com.microsoft.Teams
+      state: present
+      method: user
