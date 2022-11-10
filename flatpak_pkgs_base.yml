@@ -24,8 +24,8 @@
       state: present
       method: user
 
-  - name: install teams flatpak
+  - name: uninstall teams flatpak (use the PWA instead)
     community.general.flatpak:
       name: com.microsoft.Teams
-      state: present
+      state: absent
       method: user
