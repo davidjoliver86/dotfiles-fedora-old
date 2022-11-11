@@ -17,14 +17,14 @@
       gpgcheck: yes
       gpgkey: https://packages.microsoft.com/keys/microsoft.asc
 
-  - name: docker repo
-    yum_repository:
-      name: docker
-      baseurl: https://download.docker.com/linux/fedora/$releasever/$basearch/stable
-      description: Docker CE Stable
-      enabled: yes
-      gpgcheck: yes
-      gpgkey: https://download.docker.com/linux/fedora/gpg
+  #- name: docker repo
+  #  yum_repository:
+  #    name: docker
+  #    baseurl: https://download.docker.com/linux/fedora/$releasever/$basearch/stable
+  #    description: Docker CE Stable
+  #    enabled: yes
+  #    gpgcheck: yes
+  #    gpgkey: https://download.docker.com/linux/fedora/gpg
 
   - name: hashicorp repo
     yum_repository:
@@ -50,6 +50,6 @@
         - liberation-fonts
         - google-chrome-stable
         - code
-        - docker-ce
-        - docker-ce-cli
-        - containerd.io
+        #- docker-ce
+        #- docker-ce-cli
+        #- containerd.io
