@@ -1,0 +1,17 @@
+---
+- name: ensure ~/.local/bin exists
+  ansible.builtin.file:
+    path: ~/.local/bin
+    state: directory
+
+- name: download and extract starship
+  ansible.builtin.unarchive:
+    remote_src: yes
+    src: https://github.com/starship/starship/releases/download/v1.11.0/starship-x86_64-unknown-linux-gnu.tar.gz
+    dest: ~/.local/bin
+    creates: ~/.local/bin/starship
+
+- name: copy starship config
+  ansible.builtin.copy:
+    src: starship/starship.toml
+    dest: ~/.config/starship.toml

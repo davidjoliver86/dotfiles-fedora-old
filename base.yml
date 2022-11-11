@@ -17,6 +17,7 @@
   become_user: davido
   tasks:
     - include_tasks: flatpak_pkgs_base.yml
+    - include_tasks: starship.yml
     - include_tasks: fish.yml
     - include_tasks: vscode.yml
     - include_tasks: ssh.yml

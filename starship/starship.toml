@@ -1,0 +1,22 @@
+add_newline = false
+
+[aws]
+force_display = true
+
+[cmd_duration]
+min_time = 1_000
+show_milliseconds = true
+show_notifications = true
+
+[directory]
+truncation_length = 2
+truncate_to_repo = false
+fish_style_pwd_dir_length = 1
+
+[status]
+disabled = false
+format = "[$symbol $status]($style) "
+
+[time]
+disabled = false
+format = "[$time]($style) "

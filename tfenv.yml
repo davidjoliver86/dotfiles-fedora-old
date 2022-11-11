@@ -5,12 +5,12 @@
     dest: ~/.tfenv
     update: no
 
-- name: ensure ~/.bin exists
+- name: ensure ~/.local/bin exists
   ansible.builtin.file:
-    path: ~/.bin
+    path: ~/.local/bin
     state: directory
 
 - name: create symlinks
   shell:
-    cmd: ln -s ~/.tfenv/bin/* ~/.bin/
-    creates: ~/.bin/tfenv
+    cmd: ln -s ~/.tfenv/bin/* ~/.local/bin/
+    creates: ~/.local/bin/tfenv
