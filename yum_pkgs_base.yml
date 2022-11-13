@@ -50,6 +50,7 @@
         - liberation-fonts
         - google-chrome-stable
         - code
+        - starship
         - docker-ce
         - docker-ce-cli
         - containerd.io
