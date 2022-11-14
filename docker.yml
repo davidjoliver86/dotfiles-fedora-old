@@ -15,6 +15,12 @@
     enabled: yes
     state: started
 
+- name: start containerd service
+  ansible.builtin.service:
+    name: containerd
+    enabled: yes
+    state: started
+
 #- name: dns fix firewall rule
 #  ansible.posix.firewalld:
 #    interface: docker0
