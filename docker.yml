@@ -15,10 +15,10 @@
     enabled: yes
     state: started
 
-- name: dns fix firewall rule
-  ansible.posix.firewalld:
-    interface: docker0
-    permanent: yes
-    immediate: yes
-    zone: trusted
-    state: enabled
+#- name: dns fix firewall rule
+#  ansible.posix.firewalld:
+#    interface: docker0
+#    permanent: yes
+#    immediate: yes
+#    zone: trusted
+#    state: enabled
