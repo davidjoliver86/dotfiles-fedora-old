@@ -59,5 +59,10 @@ set -U fish_pager_color_selected_description
 set -U fish_color_option
 set -U fish_pager_color_secondary_completion
 
+# pyenv
+set -Ux PYENV_ROOT $HOME/.pyenv
+set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+pyenv init - | source
+
 # starship
 starship init fish | source

@@ -1,0 +1,6 @@
+---
+- name: checkout pyenv repo
+  ansible.builtin.git:
+    repo: https://github.com/pyenv/pyenv
+    dest: ~/.pyenv
+    update: no
