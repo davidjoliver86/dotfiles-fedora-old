@@ -1,4 +1,22 @@
 ---
+- name: docker repo
+  yum_repository:
+    name: docker
+    baseurl: https://download.docker.com/linux/fedora/$releasever/$basearch/stable
+    description: Docker CE Stable
+    enabled: yes
+    gpgcheck: yes
+    gpgkey: https://download.docker.com/linux/fedora/gpg
+
+- name: install packages
+  dnf:
+    name: "{{ packages }}"
+  vars:
+    packages:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+
 - name: ensure docker group exists
   group:
     name: docker
@@ -20,11 +38,3 @@
     name: containerd
     enabled: yes
     state: started
-
-#- name: dns fix firewall rule
-#  ansible.posix.firewalld:
-#    interface: docker0
-#    permanent: yes
-#    immediate: yes
-#    zone: trusted
-#    state: enabled

@@ -23,9 +23,3 @@
       name: net.cozic.joplin_desktop
       state: present
       method: user
-
-  - name: uninstall teams flatpak (use the PWA instead)
-    community.general.flatpak:
-      name: com.microsoft.Teams
-      state: absent
-      method: user

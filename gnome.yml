@@ -7,7 +7,7 @@
   loop:
     - { key: "/org/gnome/terminal/legacy/menu-accelerator-enabled", value: "false" }
     - { key: "/org/gnome/desktop/interface/clock-format", value: "'12h'" }
-    - { key: "/org/gnome/desktop/interface/monospace-font-name", value: "'Cascadia Mono SemiLight 11'" }
+    # - { key: "/org/gnome/desktop/interface/monospace-font-name", value: "'Source Code Pro Medium 10'" }
     - { key: "/org/gnome/desktop/interface/gtk-theme", value: "'Adwaita-dark'" }
 
 - name: copy gtk settings
