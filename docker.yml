@@ -16,6 +16,8 @@
       - docker-ce
       - docker-ce-cli
       - containerd.io
+      - docker-compose-plugin
+      - docker-buildx-plugin
 
 - name: ensure docker group exists
   group:

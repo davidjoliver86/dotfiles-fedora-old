@@ -6,7 +6,6 @@
 
 - name: create keypair
   community.crypto.openssh_keypair:
-    path: ~/.ssh/id_rsa
-    type: rsa
-    size: 4096
+    path: ~/.ssh/id_ed25519
+    type: ed25519
     comment: "{{ ansible_facts['nodename'] }}"
