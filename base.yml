@@ -5,11 +5,11 @@
   connection: local
   become: yes
   tasks:
-    - include_tasks: yum_pkgs_base.yml
-    - include_tasks: awscli.yml
-    - include_tasks: docker.yml
-    - include_tasks: virtualization.yml
-    - include_tasks: pyenv_deps.yml
+    - include_tasks: plays/yum_pkgs_base.yml
+    - include_tasks: plays/awscli.yml
+    - include_tasks: plays/docker.yml
+    - include_tasks: plays/virtualization.yml
+    - include_tasks: plays/pyenv_deps.yml
 
 - name: base (davido)
   hosts: 127.0.0.1
@@ -17,11 +17,11 @@
   become: yes
   become_user: davido
   tasks:
-    - include_tasks: flatpak_pkgs_base.yml
-    - include_tasks: starship.yml
-    - include_tasks: pyenv.yml
-    - include_tasks: vscode.yml
-    - include_tasks: ssh.yml
-    - include_tasks: tfenv.yml
-    - include_tasks: fish.yml
-    - include_tasks: gnome.yml
+    - include_tasks: plays/flatpak_pkgs_base.yml
+    - include_tasks: plays/starship.yml
+    - include_tasks: plays/pyenv.yml
+    - include_tasks: plays/vscode.yml
+    - include_tasks: plays/ssh.yml
+    - include_tasks: plays/tfenv.yml
+    - include_tasks: plays/fish.yml
+    - include_tasks: plays/gnome.yml

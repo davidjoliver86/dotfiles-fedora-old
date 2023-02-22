@@ -7,10 +7,10 @@
   loop:
     - { key: "/org/gnome/terminal/legacy/menu-accelerator-enabled", value: "false" }
     - { key: "/org/gnome/desktop/interface/clock-format", value: "'12h'" }
-    - { key: "/org/gnome/desktop/interface/monospace-font-name", value: "'Cascadia Mono PL SemiLight 11'" }
+    - { key: "/org/gnome/desktop/interface/monospace-font-name", value: "'Cascadia Mono PL 10.5'" }
     - { key: "/org/gnome/desktop/interface/gtk-theme", value: "'Adwaita-dark'" }
 
 - name: copy gtk settings
   ansible.builtin.copy:
-    src: gtk-3.0/
+    src: ../configs/gtk-3.0/
     dest: ~/.config/gtk-3.0
